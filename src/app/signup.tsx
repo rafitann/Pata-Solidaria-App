@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/Button"
-import { Input } from "@/components/input"
+import { Input } from "@/components/Input"
 import { Link } from "expo-router"
 import { Image, KeyboardAvoidingView, Platform, ScrollView, StyleSheet, Text, View } from "react-native"
 
