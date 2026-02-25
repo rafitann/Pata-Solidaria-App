@@ -14,13 +14,13 @@ export function Button({label, ... rest}: ButtonProps){
 
 const styles = StyleSheet.create({
     container:{
-        marginTop: 30,
+        marginTop: 10,
         width: "100%",
         height: 48,
-        backgroundColor: "#073bac",
+        backgroundColor: "#15104D",
         alignItems: "center",
         justifyContent: "center",
-        borderRadius: 8
+        borderRadius: 20
     },
     label: {
         color:"#FFFF",

@@ -14,19 +14,24 @@ export default function Index(){
         style={style.ilustration}
        />
 
-       <Text style ={style.title}>Seja Bem Vindo</Text>
-       <Text style ={style.subtitle}> Entre com seu email e senha</Text>
+       <Text style ={style.title}>Bem Vindo</Text>
 
        <View style={style.form}>
          <Input placeholder="E-mail" keyboardType="email-address"/>
          <Input placeholder="Senha" secureTextEntry/>
+          <Text style ={style.subtitle}>Esqueceu a senha?{"  "}
+            <Link href="/signup" style= {style.footerLink} >
+            Crie uma nova senha aqui
+            </Link>
+            </Text>
          <Button label={"Entrar"} />
+         <Button label={"Entrada Rápida"} />
        </View>
 
        <Text style ={style.footerText}>
-        Não tem uma conta? {"  "}
+        Ainda não possui uma conta? {"  "}
         <Link href="/signup" style= {style.footerLink} >
-        Cadastre-se aqui.</Link>
+        Crie aqui.</Link> 
         </Text>
        </View>
        </ScrollView>
@@ -37,7 +42,7 @@ export default function Index(){
 const style = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: "#FDFDFD",
+        backgroundColor: "#F2F1FA",
         padding:32,
 
     },
@@ -51,9 +56,10 @@ const style = StyleSheet.create({
     title: {
         fontSize: 32,
         fontWeight: 900,
-         color:"#f36d95",
+         color:"#15104D",
     },
        subtitle: {
+        color: "#15104D",
         fontSize: 16,
 
     },
@@ -67,7 +73,7 @@ const style = StyleSheet.create({
         color:"#000000"
     },
     footerLink:{
-        color:"#f36d95",
+        color:"#15104D",
         fontWeight: 700,
     },
 })

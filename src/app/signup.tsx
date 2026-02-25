@@ -1,7 +1,6 @@
 
 import { Button } from "@/components/Button"
 import { Input } from "@/components/Input"
-import { Link } from "expo-router"
 import { Image, KeyboardAvoidingView, Platform, ScrollView, StyleSheet, Text, View } from "react-native"
 
 export default function Signup(){
@@ -18,20 +17,21 @@ export default function Signup(){
         style={style.ilustration}
        />
 
-       <Text style ={style.title}>Cadastrar</Text>
+       <Text style ={style.title}>Cadastrar </Text>
 
        <View style={style.form}>
          <Input placeholder="Nome Completo" />
          <Input placeholder="E-mail" keyboardType="email-address" />
+         <Input placeholder="Telefone" keyboardType="numeric"/>
          <Input placeholder="Senha" secureTextEntry />
+         <Input placeholder="Confirmar Senha" secureTextEntry />
 
          <Button label={"Cadastrar"} />
        </View>
 
        <Text style ={style.footerText}>
        Já tem uma conta? {"  "}
-        <Link href="/" style= {style.footerLink} >
-        Entre aqui.</Link>
+        Entre aqui.
         </Text>
        </View>
        </ScrollView>
@@ -42,7 +42,7 @@ export default function Signup(){
 const style = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: "#FDFDFD",
+        backgroundColor: "#F2F1FA",
         padding:32,
 
     },
@@ -56,7 +56,7 @@ const style = StyleSheet.create({
     title: {
         fontSize: 32,
         fontWeight: 900,
-         color:"#f36d95",
+         color:"#15104D",
     },
        subtitle: {
         fontSize: 16,
