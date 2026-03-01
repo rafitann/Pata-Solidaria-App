@@ -1,10 +1,11 @@
-import { NavigationContainer } from "@react-navigation/native";
+
+import { View } from "react-native";
 import TabRoute from "./tab.routes";
 
 export default function Routes() {
   return (
-    <NavigationContainer>
+    <View style={{ flex: 1 }}>
       <TabRoute />
-    </NavigationContainer>
+    </View>
   );
 }

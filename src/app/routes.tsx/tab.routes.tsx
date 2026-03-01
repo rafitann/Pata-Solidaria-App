@@ -8,7 +8,10 @@ const Tab = createBottomTabNavigator();
 
 export default function TabRoutes() {
   return (
-    <Tab.Navigator screenOptions={{ headerShown: false }}>
+    <Tab.Navigator screenOptions={{ headerShown: false,
+      tabBarActiveTintColor: '#F59F39',
+      tabBarInactiveTintColor: "#15104D",
+     }}>
       <Tab.Screen name="Mapa" 
       component={Maps} 
       options={{tabBarIcon: ({size, color}) => <Feather name="home" size={size}  color={color}/>}} />

@@ -1,5 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Feather } from "@expo/vector-icons";
+import { StyleSheet, Text, TextInput, View } from "react-native";
 import Map, { Callout, Marker, PROVIDER_GOOGLE } from "react-native-maps";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 
 const coordinates = {
@@ -9,8 +11,23 @@ const coordinates = {
 
 export default function Maps() {
   return (
-    <View style={styles.container}>
-      <Map style={StyleSheet.absoluteFill} provider={PROVIDER_GOOGLE}
+    <SafeAreaView style={styles.container}>
+
+      <View style={styles.searchContainer}>
+        <Feather name="search" 
+        size={20} 
+        color="#333333" 
+        style={styles.searchIcon} />
+        <TextInput placeholder="Pesquisar" 
+        clearButtonMode="always" 
+        style={styles.searchInput} 
+        placeholderTextColor="#333333"
+        multiline={true}
+        textAlignVertical="center"
+        />
+      </View>
+    
+      <Map style={StyleSheet.absoluteFillObject} provider={PROVIDER_GOOGLE}
       initialRegion={{
         latitude: coordinates.latitude,
         longitude: coordinates.longitude,
@@ -21,12 +38,12 @@ export default function Maps() {
         <Marker coordinate={coordinates} />
         <Callout style={styles.callout}>
           <View>
-            <Text style = {styles.title}>ONG Pata Solidaria</Text>
-             <Text style = {styles.address}>ONG Pata Solidaria</Text>
+            <Text style = {styles.title}></Text>
+             <Text style = {styles.address}></Text>
           </View>
         </Callout>
       </Map>
-    </View>
+    </SafeAreaView>
   )
 }
 
@@ -45,6 +62,31 @@ const styles = StyleSheet.create({
   address:{
     fontSize: 14,
     color:"#20201e"
+  },
+  searchContainer:{
+    position: "absolute",
+    top: 10,
+    left:10,
+    right:10,
+    zIndex: 1000,
+    paddingVertical: 8,
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor:"#fff",
+    borderRadius: 25,
+    borderWidth: 1,
+    borderColor:"#ccc"
+    
+  },
+  searchInput:{
+    flex:1,
+    backgroundColor:"#fff",
+    paddingHorizontal:10,
+    paddingVertical:0,
+    borderColor:"#ccc",
+  },
+  searchIcon:{
+    marginLeft: 10,
   }
 })
   
