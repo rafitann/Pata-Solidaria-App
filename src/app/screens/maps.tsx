@@ -1,5 +1,5 @@
 import { Feather } from "@expo/vector-icons";
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Keyboard, StyleSheet, Text, TextInput, TouchableOpacity, TouchableWithoutFeedback, View } from "react-native";
 import Map, { Callout, Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -11,6 +11,7 @@ const coordinates = {
 
 export default function Maps() {
   return (
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <SafeAreaView style={styles.container}>
 
       <View style={styles.searchContainer}>
@@ -24,6 +25,8 @@ export default function Maps() {
         placeholderTextColor="#333333"
         multiline={true}
         textAlignVertical="center"
+        returnKeyType="search"
+        onSubmitEditing={Keyboard.dismiss}
         />
       </View>
     
@@ -48,6 +51,7 @@ export default function Maps() {
         <Text style={styles.buttonText}>Procurar ONGS próximas</Text>
       </TouchableOpacity>
     </SafeAreaView>
+    </TouchableWithoutFeedback>
   )
 }
 
