@@ -9,32 +9,32 @@ export default function Login(){
         <KeyboardAvoidingView style={{flex:1}} behavior={Platform.select({ios: "padding",android:"height"})}>
         <ScrollView 
         contentContainerStyle ={{flexGrow: 1}} keyboardShouldPersistTaps="handled">
-     <View style={style.container }>
+     <View style={styleLogin.container }>
         <Image
         source={require("@/assets/pata.png")}
-        style={style.ilustration}
+        style={styleLogin.ilustration}
        />
 
-       <Text style ={style.title}>Bem Vindo</Text>
+       <Text style ={styleLogin.title}>Bem Vindo</Text>
 
-       <View style={style.form}>
+       <View style={styleLogin.form}>
          <Input placeholder="E-mail" keyboardType="email-address"/>
          <Input placeholder="Senha" secureTextEntry/>
-          <Text style ={style.subtitle}>Esqueceu a senha?{"  "}
-            <Link href="/signup" style= {style.footerLink} >
+          <Text style ={styleLogin.subtitle}>Esqueceu a senha?{"  "}
+            <Link href="/signup" style= {styleLogin.footerLink} >
             Crie uma nova senha aqui
             </Link>
             </Text>
          <Button label={"Entrar"} />
-         <Text style = {style.footer}> Ou faça login com </Text>
+         <Text style = {styleLogin.footer}> Ou faça login com </Text>
          <Button label={"Entrada Rápida"} />
          <ButtonSocial label={"Continue com Google"} />
          <ButtonSocial label={"Continue com Facebook"} />
        </View>
 
-       <Text style ={style.footerText}>
+       <Text style ={styleLogin.footerText}>
         Ainda não possui uma conta? {"  "}
-        <Link href="/anonymouslogin" style= {style.footerLink} >
+        <Link href="/anonymouslogin" style= {styleLogin.footerLink} >
         Crie aqui.</Link> 
         </Text>
        </View>
@@ -43,7 +43,7 @@ export default function Login(){
     )
 }
 
-const style = StyleSheet.create({
+const styleLogin = StyleSheet.create({
     container:{
         flex: 1,
         backgroundColor: "#F2F1FA",
@@ -59,7 +59,7 @@ const style = StyleSheet.create({
     },
     title: {
         fontSize: 32,
-        fontWeight: 900,
+        fontWeight: "900",
          color:"#15104D",
     },
        subtitle: {
@@ -78,7 +78,7 @@ const style = StyleSheet.create({
     },
     footerLink:{
         color:"#15104D",
-        fontWeight: 700,
+        fontWeight: "700",
     },
     footer:{
         textAlign: "center",

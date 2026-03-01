@@ -1,18 +1,18 @@
 import { Button } from "@/components/Button"
 import { Input } from "@/components/Input"
-import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet, Text, View } from "react-native"
+import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet, Text ,View } from "react-native"
 
 export default function AnonymousLogin(){
     return(
         <KeyboardAvoidingView style={{flex:1}} behavior={Platform.select({ios: "padding",android:"height"})}>
         <ScrollView 
         contentContainerStyle ={{flexGrow: 1}} keyboardShouldPersistTaps="handled">
-     <View style={style.container }>
-         <View style={style.retangulo}>
-       <Text style ={style.subtitle}>Para Realizar o Login anônimo solicitamos que informe seu número.</Text>
-       <Text style ={style.subtitle}>Enviaremos um código de verificação por SMS para confirmar seu número.</Text>
+     <View style={styleAnonymous.container }>
+         <View style={styleAnonymous.retangulo}>
+       <Text style ={styleAnonymous.subtitle}>Para Realizar o Login anônimo solicitamos que informe seu número.</Text>
+       <Text style ={styleAnonymous.subtitle}>Enviaremos um código de verificação por SMS para confirmar seu número.</Text>
        </View>
-       <View style={style.form}>
+       <View style={styleAnonymous.form}>
           <Input placeholder="Telefone"/>
           <Button label={"Receber Código"} />
        </View>
@@ -22,7 +22,7 @@ export default function AnonymousLogin(){
     )
 }
 
-const style = StyleSheet.create({
+const styleAnonymous = StyleSheet.create({
     container:{
         flex: 1,
         justifyContent: 'center',
@@ -39,14 +39,14 @@ const style = StyleSheet.create({
   },
     title: {
         fontSize: 32,
-        fontWeight: 900,
+        fontWeight: "900",
          color:"#15104D",
     },
        subtitle: {
         padding:10,
         textAlign: "center",
         color: "#000000",
-        fontWeight: 600,
+        fontWeight: "600",
         fontSize: 16,
 
     },

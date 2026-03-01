@@ -55,7 +55,7 @@ const style = StyleSheet.create({
     },
     title: {
         fontSize: 32,
-        fontWeight: 900,
+        fontWeight: "900",
          color:"#15104D",
     },
        subtitle: {
@@ -73,6 +73,6 @@ const style = StyleSheet.create({
     },
     footerLink:{
         color:"#f36d95",
-        fontWeight: 700,
+        fontWeight: "700",
     },
 })
