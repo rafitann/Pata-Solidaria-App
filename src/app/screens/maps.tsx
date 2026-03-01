@@ -1,5 +1,5 @@
 import { Feather } from "@expo/vector-icons";
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import Map, { Callout, Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -43,6 +43,10 @@ export default function Maps() {
           </View>
         </Callout>
       </Map>
+
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>Procurar ONGS próximas</Text>
+      </TouchableOpacity>
     </SafeAreaView>
   )
 }
@@ -87,6 +91,23 @@ const styles = StyleSheet.create({
   },
   searchIcon:{
     marginLeft: 10,
+  },
+  button: {
+    flex: 1,
+    height: 50,
+    backgroundColor: "#15104D",
+    position: "absolute",
+    bottom: 24, 
+    left: 24,
+    right: 24, 
+    borderRadius: 20,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "bold",
   }
 })
   
