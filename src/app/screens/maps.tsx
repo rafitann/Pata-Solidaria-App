@@ -39,6 +39,9 @@ export default function Maps() {
       }}
       >
         <Marker coordinate={coordinates} />
+        <Marker coordinate={{latitude: -23.572376707433175, longitude: -46.80563157455025}} />
+        <Marker coordinate={{latitude: -23.540967782632013, longitude: -46.73118018030133}} />
+      
         <Callout style={styles.callout}>
           <View>
             <Text style = {styles.title}></Text>
